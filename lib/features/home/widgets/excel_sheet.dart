@@ -61,6 +61,13 @@ class _AboutExcelPopUpState extends State<AboutExcelPopUp>
 
     // Animation timings that accelerate then decelerate
     final delays = [
+      950, // 2007
+      950, // 2008
+      950, // 2009
+      900, // 2010
+      900, // 2011
+      900, // 2012
+      850, // 2013
       800, // 2014
       750, // 2015
       700, // 2016
@@ -75,7 +82,7 @@ class _AboutExcelPopUpState extends State<AboutExcelPopUp>
       0, // 2025 - final (stays forever)
     ];
 
-    for (int i = 11; i >= 0; i--) {
+    for (int i = 18; i >= 0; i--) {
       if (!mounted) return;
 
       setState(() {
@@ -89,7 +96,7 @@ class _AboutExcelPopUpState extends State<AboutExcelPopUp>
 
       // Wait before next transition
       if (i > 0) {
-        await Future.delayed(Duration(milliseconds: delays[11 - i]));
+        await Future.delayed(Duration(milliseconds: delays[18 - i]));
       } else {
         // Reached 2025 - stop animating
         setState(() {
@@ -495,6 +502,41 @@ class _AboutExcelPopUpState extends State<AboutExcelPopUp>
       'year': '2014',
       'path': 'assets/logos/2014.png',
       'background': 'assets/logos/2014bg.png',
+    },
+    {
+      'year': '2013',
+      'path': 'assets/logos/2013.png',
+      'background': 'assets/logos/2013bg.png',
+    },
+    {
+      'year': '2012',
+      'path': 'assets/logos/2012.png',
+      'background': 'assets/logos/2012bg.png',
+    },
+    {
+      'year': '2011',
+      'path': 'assets/logos/2011.png',
+      'background': 'assets/logos/2011bg.png',
+    },
+    {
+      'year': '2010',
+      'path': 'assets/logos/2010.png',
+      'background': 'assets/logos/2010bg.png',
+    },
+    {
+      'year': '2009',
+      'path': 'assets/logos/2009.png',
+      'background': 'assets/logos/2009bg.png',
+    },
+    {
+      'year': '2008',
+      'path': 'assets/logos/2008.png',
+      'background': 'assets/logos/2008bg.png',
+    },
+    {
+      'year': '2007',
+      'path': 'assets/logos/2007.png',
+      'background': 'assets/logos/2007bg.png',
     },
   ];
 }
